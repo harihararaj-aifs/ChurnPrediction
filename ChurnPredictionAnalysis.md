@@ -27,7 +27,7 @@ Where the customer consciously cancels the subscription
 - Auto-renew often turned OFF before cancel
 
 ## Involuntary Churn:
-Customer didn't cancel intentionally, subscription stopped due to failed payment (cases where the customer may not even notics)
+Customer didn't cancel intentionally, subscription stopped due to failed payment (cases where the customer may not even notice)
 
 ### How this may look:
 System attempts charge -> Payment failed -> Retry 1 -> Retry 2 -> Retry 3 -> Subscription suspended
@@ -55,8 +55,8 @@ Customer stops using the service but technically their subscription is still act
 Auto-renew = TRUE -> Still paying monthly -> Has not washed car in the last 45+ days
 
 > [!WARNING]
-> High future churn risk
-> They may cancel soon
+> High future churn risk<br>
+> They may cancel soon<br>
 > They may dispute charge
 
 ## Seasonal Churn (Temporary):
