@@ -168,6 +168,6 @@ You can reduce total churn significantly without changing product
 - usage_momentum = (washes_last_30d - washes_prev_30d) - (washes_prev_30d - washes_prev_60d)
 
 ## Prediction:
-- Will customer churn in next N days (common N = 30) [binary - 0 or 1]
+- **Will customer churn in next N days (common N = 30) [binary - 0 or 1]**
 - What type of churn (0 - No Churn, 1 - Voluntary Churn, 2 - Involuntary Churn) - Heavy data analysis and pre-processing would be needed to prepare the training data
 - Survival Analysis (Spotify uses this) [doc](https://research.atspotify.com/2022/11/survival-analysis-meets-reinforcement-learning)
