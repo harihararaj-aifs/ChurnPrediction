@@ -70,7 +70,7 @@ This is cyclical churn.
 > Need to cautious about this churn, this may lead to over-predict churn in summer and under-predict in the winter
 
 > [!IMPORTANT]
-> Since in Michigan, we need to consider this
+> Since JAX is based in Michigan, we need to consider this
 
 ## Downgrade Churn:
 Not full churn, but revenue churn
