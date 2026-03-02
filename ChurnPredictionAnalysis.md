@@ -2,7 +2,12 @@
 
 ## Types of Churns:
 - Voluntary Churn (Active Cancellation)
-- 
+- Involuntary Churn
+- Passive Churn
+- Seasonal Churn
+- Downgrade Churn
+- Forced Churn
+- Early Tenure Churn
 
 ## Voluntart Churn:
 Where the customer consciously cancels the subscription
