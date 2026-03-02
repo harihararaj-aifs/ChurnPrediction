@@ -9,7 +9,7 @@
 - Forced Churn
 - Early Tenure Churn
 
-## Voluntart Churn:
+## Voluntary Churn:
 Where the customer consciously cancels the subscription
 
 ### Reasons:
