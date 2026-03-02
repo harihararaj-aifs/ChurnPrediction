@@ -124,7 +124,7 @@ If you reduce payment churn by:
 You can reduce total churn significantly without changing product
 
 
-## Features for Jax churn model (what to include)
+## Features for Jax churn model
 
 ### Usage / DRD (visit behavior)
 - washes_last_7d / 30d / 90d
