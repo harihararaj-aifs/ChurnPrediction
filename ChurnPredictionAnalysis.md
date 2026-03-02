@@ -127,7 +127,6 @@ You can reduce total churn significantly without changing product
 ## Features for Jax churn model (what to include)
 
 ### Usage / DRD (visit behavior)
-These are usually your strongest predictors for voluntary/passive churn.
 - washes_last_7d / 30d / 90d
 - days_since_last_wash
 - usage_trend (washes_last_30d vs previous_30d)
@@ -145,7 +144,6 @@ These are usually your strongest predictors for voluntary/passive churn.
 - pause/suspend status (if exists)
 
 ### Payments & billing (involuntary churn engine)
-These dominate involuntary churn prediction.
 - payment_failures_last_30d / 90d
 - retry_count_last_bill
 - days_since_last_successful_payment
@@ -154,13 +152,11 @@ These dominate involuntary churn prediction.
 - outstanding_balance / chargeback flags (if applicable)
 
 ### Customer support / experience
-Often helps catch “angry churn.”
 - complaints_last_90d
 - refund_count
 - service_quality flags, rewash requests
 
 ### Seasonality / external context
-Car wash is seasonal.
 - month, week_of_year
 - temperature/snow/rain proxies (even simple season/month helps)
 - holiday periods
