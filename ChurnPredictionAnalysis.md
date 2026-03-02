@@ -158,8 +158,14 @@ You can reduce total churn significantly without changing product
 
 ### Seasonality / external context
 - month, week_of_year
-- temperature/snow/rain proxies (even simple season/month helps)
-- holiday periods
+- Seasonal flags (is_winter, is_spring, is_summer)
+- Instead of washes_last_30d, we can use ```relative_usage = washes_last_30d / avg_washes_for_all_customers_in_same_month```
+- consecutive_payment_failures
+- first_time_failure_flag
+- retry_count_trend
+
+### Features to capture the time-series:
+- usage_momentum = (washes_last_30d - washes_prev_30d) - (washes_prev_30d - washes_prev_60d)
 
 ## Prediction:
 - Will customer churn in next N days (common N = 30) [binary - 0 or 1]
