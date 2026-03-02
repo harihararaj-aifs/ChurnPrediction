@@ -95,7 +95,7 @@ Customers who churn within first 1–2 months.
 
 This type behaves differently from long-term churners.
 
-## Features:
+### Features:
 - tenure_months
 - first_month_usage
 
@@ -111,7 +111,7 @@ AND tenure < 3 months
 ```
 -> High churn probability.
 
-### Business Insight
+## Business Insight
 In many subscription companies:
 20–40% churn = involuntary (payment)
 60–80% churn = voluntary
