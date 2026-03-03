@@ -177,7 +177,7 @@ Score all members with their likelihood to cancel on a scale of 1 - 100.  This w
 
 Predict which members will cancel 30–90 days before they do - ****
 
-Identify drivers of churn: **Use SHAP (SHapley Additive exPlanations) to find the influence of various features on the output**
+### Identify drivers of churn: **Use SHAP (SHapley Additive exPlanations) to find the influence of various features on the output**
 usage drop patterns
 weather behavior
 site experience
@@ -185,7 +185,7 @@ payment failures
 Google Review for the site they are visiting; if they visit more then one that that might change.
 Assume if someone is using multiple sites they re less likely to churn (we think?)
 
-Trigger automatic actions:
+### Trigger automatic actions:
 save offers while active; before they quit for those necessary
 Flag high risk cancellations
 re-engagement campaigns
