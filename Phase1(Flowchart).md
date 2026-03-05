@@ -46,9 +46,9 @@ M[Fraud Detection Table]
 end
 
 subgraph Reporting
-K[Churn Report (Weekly)]
-L[Staffing Report (Daily)]
-M[Fraud Report (Daily)]
+K["Churn Report (Weekly)"]
+L["Staffing Report (Daily)"]
+M["Fraud Report (Daily)"]
 end
 
 A --> C
