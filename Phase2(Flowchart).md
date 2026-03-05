@@ -47,9 +47,9 @@ K[Dashboards / Chat]
 end
 
 subgraph Reporting
-L[Churn Reports - Weekly]
-M[Staffing Reports - Daily]
-N[Fraud Reports - Daily]
+L["Churn Reports (Weekly)"]
+M["Staffing Reports (Daily)"]
+N["Fraud Reports (Daily)"]
 end
 
 A --> C
