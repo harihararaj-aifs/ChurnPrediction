@@ -19,7 +19,7 @@ flowchart LR
 
 subgraph Sources
 A[UC MySQL]
-B[SiteWatch Firebird Replica]
+B[SiteWatch Firebird Rep-hub]
 end
 
 subgraph Ingestion
@@ -27,7 +27,7 @@ C[Airbyte / dlt]
 end
 
 subgraph Storage
-D[RAW / ODS Tables]
+D[MotherDuck<br>(RAW / ODS Tables)]
 end
 
 subgraph Processing
@@ -40,10 +40,16 @@ G[MotherDuck]
 end
 
 subgraph Analytics
-H[Churn Report]
-I[Staffing Report]
-J[Fraud Report]
+H[Churn Marts]
+I[Staffing Marts]
+J[Fraud Marts]
 K[Dashboards / Chat]
+end
+
+subgraph Reporting
+L[Churn Reports (Weekly)]
+M[Staffing Reports (Daily)]
+N[Fraud Reports (Daily)]
 end
 
 A --> C
@@ -56,6 +62,9 @@ G --> H
 G --> I
 G --> J
 G --> K
+H --> L
+I --> M
+J --> N
 ```
 
 ---

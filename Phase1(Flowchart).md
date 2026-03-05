@@ -17,36 +17,36 @@ Phase 1 builds the initial ML-driven reporting system. Data is extracted nightly
 ```mermaid
 flowchart LR
 
-subgraph Data_Sources
+subgraph DataSources
 A[UC MySQL]
 B[SiteWatch Firebird Rep-hub]
 end
 
-subgraph Data_Extraction
-C[Python Extraction<br>Initial + Daily Night Jobs]
+subgraph DataExtraction
+C[Python Extraction<br>Initial + Daily Night Jobs<br>(Python/Airbyte/dlt)]
 end
 
-subgraph Cloud_Storage
+subgraph CloudStorage
 D[GCP Blob Storage]
 end
 
-subgraph Feature_Engineering
+subgraph FeatureEngineering
 E[DuckDB Feature Processing]
 F[Feature Store<br>Local DuckDB]
 end
 
-subgraph Machine_Learning
+subgraph MachineLearning
 G[ML Models]
 end
 
 subgraph Predictions
-H[Churn Prediction]
-I[Staffing Prediction]
-J[Fraud Detection]
+H[Churn Prediction (Weekly)]
+I[Staffing Prediction (Daily)]
+J[Fraud Detection (Daily)]
 end
 
 subgraph Reporting
-K[Prediction Reports]
+K[DuckDB<br>(Storing Predictions back to the DuckDB for reporting and future queries)]
 end
 
 A --> C
