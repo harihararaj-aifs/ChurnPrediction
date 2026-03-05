@@ -39,14 +39,16 @@ subgraph MachineLearning
 G[ML Models]
 end
 
-subgraph Predictions
-H[Churn Prediction - Weekly]
-I[Staffing Prediction - Daily]
-J[Fraud Detection - Daily]
+subgraph "Storage<br>(Local DuckDB)"
+K[Churn Prediction Table]
+L[Staffing Prediction Table]
+M[Fraud Detection Table]
 end
 
 subgraph Reporting
-K["DuckDB<br>(Storing Predictions back to the DuckDB for reporting and future queries)"]
+K[Churn Report (Weekly)]
+L[Staffing Report (Daily)]
+M[Fraud Report (Daily)]
 end
 
 A --> C
@@ -59,8 +61,8 @@ G --> H
 G --> I
 G --> J
 H --> K
-I --> K
-J --> K
+I --> L
+J --> M
 ```
 
 ---
