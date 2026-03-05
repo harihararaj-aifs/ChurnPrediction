@@ -27,7 +27,7 @@ C[Airbyte / dlt]
 end
 
 subgraph Storage
-D[MotherDuc<br>RAW / ODS Tables]
+D[MotherDuck<br>RAW / ODS Tables]
 end
 
 subgraph Processing
