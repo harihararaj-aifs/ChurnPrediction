@@ -23,7 +23,7 @@ B[SiteWatch Firebird Rep-hub]
 end
 
 subgraph DataExtraction
-C[Python Extraction<br>Initial + Daily Night Jobs<br>(Python/Airbyte/dlt)]
+C[Python Extraction\nInitial + Daily Night Jobs\n(Python/Airbyte/dlt)]
 end
 
 subgraph CloudStorage
@@ -32,7 +32,7 @@ end
 
 subgraph FeatureEngineering
 E[DuckDB Feature Processing]
-F[Feature Store<br>Local DuckDB]
+F[Feature Store\nLocal DuckDB]
 end
 
 subgraph MachineLearning
@@ -46,7 +46,7 @@ J[Fraud Detection (Daily)]
 end
 
 subgraph Reporting
-K[DuckDB<br>(Storing Predictions back to the DuckDB for reporting and future queries)]
+K[DuckDB\n(Storing Predictions back to the DuckDB for reporting and future queries)]
 end
 
 A --> C
