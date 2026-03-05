@@ -39,7 +39,7 @@ subgraph MachineLearning
 G[ML Models]
 end
 
-subgraph "Storage<br>(Local DuckDB)"
+subgraph "Storage (Local DuckDB)"
 H[Churn Prediction Table]
 I[Staffing Prediction Table]
 J[Fraud Detection Table]
