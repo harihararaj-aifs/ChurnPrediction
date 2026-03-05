@@ -1,40 +1,52 @@
-# Phase 1 – Data Pipeline Architecture
+# Phase 1 – ML Reporting Pipeline Architecture
 
 ## Overview
 
-Phase 1 focuses on building the initial reporting platform using Python extraction pipelines and DuckDB for analytics.
+Phase 1 builds the initial ML-driven reporting system. Data is extracted nightly from operational databases, stored in cloud blob storage, processed using DuckDB for feature engineering, and used by ML models to generate predictive reports.
 
 ### Scope
 
-* Churn Report
-* Staffing Report
-* Fraud Report
+* Churn Prediction
+* Staffing Prediction
+* Fraud Detection
 
 ---
 
-## Architecture Flow
+# Architecture Flow
 
 ```mermaid
 flowchart LR
 
-subgraph Sources
+subgraph Data_Sources
 A[UC MySQL]
-B[SiteWatch Firebird Replica]
+B[SiteWatch Firebird]
 end
 
-subgraph Extraction
-C[Python Extract<br>Initial + Daily]
+subgraph Data_Extraction
+C[Python Extraction<br>Initial + Daily Night Jobs]
 end
 
-subgraph Processing
-D[GCP VM]
-E[DuckDB]
+subgraph Cloud_Storage
+D[GCP Blob Storage]
 end
 
-subgraph Reports
-F[Churn Report<br>Weekly]
-G[Staffing Report<br>Daily]
-H[Fraud Report<br>Daily]
+subgraph Feature_Engineering
+E[DuckDB Feature Processing]
+F[Feature Store<br>Local DuckDB]
+end
+
+subgraph Machine_Learning
+G[ML Models]
+end
+
+subgraph Predictions
+H[Churn Prediction]
+I[Staffing Prediction]
+J[Fraud Detection]
+end
+
+subgraph Reporting
+K[Prediction Reports]
 end
 
 A --> C
@@ -42,33 +54,87 @@ B --> C
 C --> D
 D --> E
 E --> F
-E --> G
-E --> H
+F --> G
+G --> H
+G --> I
+G --> J
+H --> K
+I --> K
+J --> K
 ```
 
 ---
 
-## Components
+# Pipeline Components
 
-**Sources**
+## Data Sources
+
+Operational databases used by the car wash platform.
 
 * UC MySQL
-* SiteWatch Firebird replica database
+* SiteWatch Firebird
 
-**Ingestion**
+---
 
-* Python scripts perform initial and daily extraction.
+## Data Extraction
 
-**Compute**
+Python ETL jobs perform:
 
-* Runs on a GCP VM.
+* Initial full extraction
+* Daily incremental extraction
+* Scheduled **nightly runs**
 
-**Storage / Query Engine**
+These jobs extract operational data from both databases.
 
-* DuckDB used for analytics and report generation.
+---
 
-**Outputs**
+## Cloud Storage
 
-* Weekly Churn Report
-* Daily Staffing Report
-* Daily Fraud Report
+Extracted data is stored in:
+
+**GCP Blob Storage**
+
+Benefits:
+
+* Cheap storage
+* Decouples ingestion from analytics
+* Enables reprocessing if needed
+
+---
+
+## Feature Engineering
+
+DuckDB reads the extracted files from GCP Blob storage.
+
+Tasks include:
+
+* Data cleaning
+* Aggregations
+* Feature creation
+* Behavioral metrics
+
+The resulting **feature set is stored in a local DuckDB database**.
+
+---
+
+## Machine Learning Layer
+
+ML models run on the engineered feature set.
+
+Models predict:
+
+* Customer churn probability
+* Future staffing demand
+* Fraud anomalies
+
+---
+
+## Outputs
+
+The system generates prediction reports:
+
+* **Churn Prediction Report**
+* **Staffing Forecast Report**
+* **Fraud Detection Report**
+
+These reports can be scheduled or shared with stakeholders.
