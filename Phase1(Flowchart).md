@@ -19,7 +19,7 @@ flowchart LR
 
 subgraph Data_Sources
 A[UC MySQL]
-B[SiteWatch Firebird]
+B[SiteWatch Firebird Rep-hub]
 end
 
 subgraph Data_Extraction
