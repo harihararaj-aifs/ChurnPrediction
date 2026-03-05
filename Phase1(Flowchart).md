@@ -40,9 +40,9 @@ G[ML Models]
 end
 
 subgraph "Storage<br>(Local DuckDB)"
-K[Churn Prediction Table]
-L[Staffing Prediction Table]
-M[Fraud Detection Table]
+H[Churn Prediction Table]
+I[Staffing Prediction Table]
+J[Fraud Detection Table]
 end
 
 subgraph Reporting
