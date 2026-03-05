@@ -46,7 +46,7 @@ J[Fraud Detection - Daily]
 end
 
 subgraph Reporting
-K[DuckDB<br>Storing Predictions back to the DuckDB for reporting and future queries]
+K["DuckDB<br>(Storing Predictions back to the DuckDB for reporting and future queries)"]
 end
 
 A --> C
