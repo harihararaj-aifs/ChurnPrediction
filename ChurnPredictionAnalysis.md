@@ -197,6 +197,5 @@ Predict which members will cancel 30–90 days before they do
 
 ## Terms:
 MSP - Membership Service Advisor
-
 - Levenshtein Distance (How many characters have been altered)
 
