@@ -164,6 +164,9 @@ You can reduce total churn significantly without changing product
 - first_time_failure_flag
 - retry_count_trend
 
+### Store:
+- Which store customer visits regularly
+
 ### Features to capture the time-series:
 - usage_momentum = (washes_last_30d - washes_prev_30d) - (washes_prev_30d - washes_prev_60d)
 
