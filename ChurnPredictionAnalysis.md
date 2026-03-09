@@ -126,7 +126,7 @@ You can reduce total churn significantly without changing product
 
 ## Features for Jax churn model
 
-### Usage / DRD (visit behavior)
+### Usage / DRB (visit behavior)
 - washes_last_7d / 30d / 90d
 - days_since_last_wash
 - usage_trend (washes_last_30d vs previous_30d)
@@ -190,4 +190,10 @@ Predict which members will cancel 30–90 days before they do
 - Flag high risk cancellations
 - re-engagement campaigns
 - targeted incentives
+
+
+## Terms:
+MSP - Membership Service Advisor
+
+- Levenshtein Distance (How many characters have been altered)
 
