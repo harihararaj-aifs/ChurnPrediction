@@ -80,7 +80,7 @@ Not full churn, but revenue churn
 
 Revenue drop but customer retained, For business this is still partial churn
 
-## Forced Churn:
+## Forced Churn: (As per discussion with Jon, we don't flag frauds yet)
 Less common but important
 - Fraud detected
 - Abuse of unlimited plan
